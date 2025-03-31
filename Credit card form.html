@@ -4,18 +4,18 @@
 
     </head>
     <body>
-        <form>
+        <form id="ContactForm">
             <label for="firstname">Name</label>
-            <input type="text">
+            <input type="text" id="firstname">
 <br>
             <label for="secondname">Second name</label>
-            <input type="text">
+            <input type="text" id="secondname">
 <br>
             <label for="emailadress">Email Adress</label>
-            <input type="text">
+            <input type="text" id="emailadress">
 <br>
             <label for="dateofbirth">Date of birth</label>
-            <input type="date">
+            <input type="date" id="dateofbirth">
 <br>
             <fieldset>
                 <legend>Credit Card type:</legend>
@@ -31,7 +31,44 @@
                 <br>
                 <label for="americanexpress"><img src="americanExpress.png" alt=""width="100" height="50"></label>
                 <input type="radio" name="verga">
+                <br>
+                <input type="text">
+                <label for="ccn">Credit Card Number</label>
+                <br>
+                <label>Expiry Year:</label>
+                <select name="exyear">
+                    <option>2025</option>
+                    <option>2026</option>
+                    <option>2027</option>
+                    <option>2028</option>
+                    <option>2029</option>
+                    <option>2030</option>
+                </select>
+                <br>
+                <label for="month">Expiry month</label>
+                <input type="month">Select month</input>
             </fieldset>
+            <br>
+            <label for="addnotes">Additional notes</label>
+            <br>
+            <textarea name="notes" rows="4" cols=40>Enter addtional notes here</textarea><br><br>
+
+
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" value=""/><br>
+            <input type="submit" value="submit"/>
         </form>
+        <script>
+            let formID = document.getElementById("ContactForm")
+            formID.addEventListener("submit", userData)
+            function userData(event){
+                event.preventDefault()
+                let userName = document.getElementById("name")
+                console.log(userName.value)
+
+            }
+
+        </script>
     </body>
+        
 </html>
