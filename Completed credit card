@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form id="ContactForm">
+            <label for="firstname">Name</label>
+            <input type="text" id="firstname">
+<br>
+            <label for="secondname">Second name</label>
+            <input type="text" id="secondname">
+<br>
+            <label for="emailadress">Email Adress</label>
+            <input type="text" id="emailadress">
+<br>
+            <label for="dateofbirth">Date of birth</label>
+            <input type="date" id="dateofbirth">
+<br>
+            <fieldset>
+                <legend>Credit Card type:</legend>
+                <br>
+                <label for="visa"><img src="Visa.png" alt="visa" width="100" height="50"></label><br>
+                <input type="radio" name="verga" >
+                <br>
+                <label for="visadebit"><img src="Visa_debit.png" alt="visadebit"width="100" height="50"></label><br>
+                <input type="radio" name="verga">
+                <br>
+                <label for="mastercard"><img src="mastercard.png" alt="mastercard"width="100" height="50"></label><br>
+                <input type="radio" name="verga">
+                <br>
+                <label for="americanexpress"><img src="americanExpress.png" alt="americanexpress"width="100" height="50"></label><br>
+                <input type="radio" name="verga">
+                <br>
+                <input type="text">
+                <label for="ccn">Credit Card Number</label>
+                <br>
+                <label>Expiry Year:</label>
+                <select name="expiryyear">
+                    <option>2025</option>
+                    <option>2026</option>
+                    <option>2027</option>
+                    <option>2028</option>
+                    <option>2029</option>
+                    <option>2030</option>
+                </select>
+                <br>
+                <label for="month">Expiry month</label>
+                <input type="month">Select month</input>
+            </fieldset>
+            <br>
+            <label for="addnotes">Additional notes</label>
+            <br>
+            <textarea name="notes" rows="4" cols=40>Enter addtional notes here</textarea><br><br>
+
+
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" value=""/><br>
+            <input type="submit" value="submit"/>
+        </form>
+        <script>
+            let formID = document.getElementById("ContactForm")
+            formID.addEventListener("submit", userData)
+            function userData(event){
+                event.preventDefault()
+                let userName = document.getElementById("firstname")
+                console.log(userName.value)
+                let userName2 = document.getElementById("secondname")
+                console.log(userName2.value)
+                let userName3 = document.getElementById("emailadress")
+                console.log(userName3.value)
+                let userName4 = document.getElementById("dateofbirth")
+                console.log(userName4.value)
+                let h = document.querySelector('input[name="verga"]:checked')
+                console.log(h.value)
+
+
+
+            }
+
+        </script>
+    </body>
+        
+</html>
