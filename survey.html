@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>Form</head>
+    <head>Survey</head>
     <body>
-        <form>
+        <form id="hola">
             <label for="firstname">firstname</label>
             <input type="text" id="firstname"><br>
             <label for="age">Age</label>
-            <input type="number" id="age">
+            <input type="number" id="age"><br>
             <label for="favc">Favourite country you have visited</label>
-            <input type="text" id="favc">
-            <label for=""></label>
+            <input type="text" id="favc"><br>
+            <h3>select your hair color</h3>
+            <input type="radio" name="hair" id="blonde" value="blonde">
+            <label for="blonde">blonde</label>
+            <input type="radio" name="hair" id="dark" value="dark">
+            <label for="dark">Dark</label>
+            <input type="radio" name="hair" id="brown" value="brown">
+            <label for="brown">Brown</label><br>
+            <h3>select the best 2 cars that you like</h3>
+            <input type="checkbox" name="volvo" id="volvo" value="volvo">
+            <label for="volvo">Volvo</label>
+            <input type="checkbox" name="seat" id="seat" value="seat">
+            <label for="seat">Seat</label>
+            <input type="checkbox" name="honda" id="honsa" value="honda">
+            <label for="honda">Honda</label>
+            <input type="checkbox" name="toyota" id="toyota" value="toyota">
+            <label for="toyota">Toyota</label><br><br>
 
-
-
+            <input type="submit" value="submit">
 
         </form>
+        <script>
+             let formID = document.getElementById("hola")
+            formID.addEventListener("submit", userData)
+            function userData(event){
+                event.preventDefault()
+                let userName = document.getElementById("firstname")
+                console.log(userName.value)
+                let userName2 = document.getElementById("age")
+                console.log(userName2.value)
+                let userName3 = document.getElementById("favc")
+                console.log(userName3.value)
+                
+                let h = document.querySelector('input[name="hair"]:checked')
+                console.log(h.value)
+                
+
+            }
+        </script>
     </body>
 </html>
